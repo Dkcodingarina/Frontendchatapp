@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import io from "socket.io-client";
 import Chat from "./Chat";
 
+// Connect directly to your backend hosted on Render
 const socket = io(process.env.REACT_APP_BACKEND_URL, {
-  withCredentials: true,
+  transports: ["websocket"],
 });
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       setShowChat(true);
     }
   };
+
   return (
     <>
       {!showChat && (
@@ -25,13 +27,12 @@ const App = () => {
           <input
             type="text"
             placeholder="Enter your Name"
-            uppercase
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value.toUpperCase())}
             style={{ textTransform: 'uppercase' }}
           />
           <input
             type="text"
-            placeholder="Enter room id"
+            placeholder="Enter Room ID"
             onChange={(e) => setRoom(e.target.value)}
           />
           <button onClick={joinChat}>Join</button>
