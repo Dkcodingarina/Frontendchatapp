@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import Chat from "./Chat";
 
 // Connect directly to your backend hosted on Render
-const socket = io(process.env.REACT_APP_BACKEND_URL, {
+const socket = io(import.meta.env.VITE_BACKEND_URL, {
   transports: ["websocket"],
 });
 
