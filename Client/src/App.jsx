@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import io from "socket.io-client";
 import Chat from "./Chat";
 
-const socket = io("http://localhost:5001");
+const socket = io(procss.env.REACT_APP_BACKEND_URL);
 
 const App = () => {
   const [username, setUsername] = useState("");
