@@ -1,0 +1,123 @@
+body {
+  color: white;
+  background: url('./assets/image2.jpg') no-repeat center center fixed;
+}
+.join_room {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.join_room input {
+  height: 35px;
+  width: 300px;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  border: 1px solid rgb(0, 255, 191);
+  outline: none;
+  padding-left: 5px;
+}
+.join_room input::placeholder {
+  font-weight: bolder;
+}
+.join_room button {
+  font-weight: bolder;
+  height: 40px;
+  width: 310px;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 115, 255);
+  border: 1px solid black;
+}
+
+/* chat_conatiner  css*/
+.chat_container {
+  height: 600px;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  /* background-color: pink; */
+}
+
+.chat_box {
+  height: 510px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.395);
+  position: relative;
+
+  
+}
+
+.chat_body {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat_body input {
+  height: 40px;
+  width: 95%;
+  outline: none; 
+  background-color: rgba(240, 248, 255, 0.6);
+  
+}
+
+.chat_body input::placeholder {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.chat_body button {
+  height: 46px;
+  float: right;
+  width: 5%;
+  
+  background-color: rgb(29, 181, 251);
+  color: white;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+
+.message_content{
+  display: flex;
+  line-height: 1px;
+  color: black;
+  font-weight: bolder;
+}
+#you{
+  justify-content: flex-end;
+}
+#y{
+  background-color: #FA34F1;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+#other{
+  justify-content: flex-start;
+}
+#b{
+  /* background-color: rgb(207, 255, 218); */
+  background-color: #085CE8;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+ padding: 5px;
+}
+.msg_detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.auto_scrolling::-webkit-scrollbar {
+  display: none;
+}
