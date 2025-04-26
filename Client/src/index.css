@@ -113,7 +113,7 @@ body {
   border: 1px solid black;
   border-radius: 5px;
  padding: 5px;
-  color: white;
+  color: #FFFFFF;
 }
 .msg_detail{
   display: flex;
