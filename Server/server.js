@@ -14,7 +14,7 @@ const server = http.createServer(app);
 //Socket
 const io = new Server(server, {
 cors: {
-origin: ["https://frontendchatapp-pi.vercel.app", "http://localhost:5173"]
+origin: ["https://frontendchatapp-pi.vercel.app", "http://localhost:5173"],
   methods: ["GET", "POST"],
 },
 });
